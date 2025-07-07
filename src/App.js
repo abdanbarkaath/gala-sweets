@@ -1,31 +1,11 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './App.css';
 import cakeVideo from './assets/cakevideo.mp4';
 import tresleches1 from './assets/tresleches1.jpg';
 import tresleches2 from './assets/tresleches2.jpg';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 
 function App() {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-      .then(
-        () => {
-          alert('Message sent successfully!');
-          form.current.reset();
-        },
-        (error) => {
-          console.error('EmailJS error:', error.text);
-          alert('Message failed to send.');
-        }
-      );
-  };
-
   return (
     <div className="App">
       {/* Hero Section with Fullscreen Background Video */}
@@ -92,10 +72,10 @@ function App() {
       {/* Contact Section */}
       <section className="contact">
         <h2>Contact Us</h2>
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="4" required></textarea>
           <button type="submit">Send Message</button>
         </form>
       </section>

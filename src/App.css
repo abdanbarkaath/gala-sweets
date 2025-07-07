@@ -6,6 +6,7 @@
   --light-peach: #f8d6dd;
   --dark-text: #3a2e2e;
   --white: #ffffff;
+  --soft-beige: #f4eade;
 }
 
 html, body {
@@ -48,7 +49,6 @@ html, body {
   height: 100vh;
   object-fit: cover;
   opacity: 0.35;
-  /* z-index: -1; */
 }
 
 .hero-overlay {
@@ -83,6 +83,51 @@ html, body {
 
 .cta-button:hover {
   background-color: #8d6945;
+}
+
+/* Cards Section */
+.cards-section {
+  background-color: var(--soft-beige);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card:nth-child(1) {
+  transform: translateY(-20px);
+}
+
+.card:nth-child(2) {
+  transform: translateY(20px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
 }
 
 /* About Section */
@@ -192,4 +237,24 @@ footer {
   .hero-overlay {
     padding: 10px;
   }
+
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card:nth-child(1),
+  .card:nth-child(2) {
+    transform: none;
+  }
 }
+
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
