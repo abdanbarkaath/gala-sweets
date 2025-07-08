@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import cakeVideo from './assets/cakeBackgroundVideo.mp4';
+import cakeBackgroundVideo from './assets/cakeBackgroundVideo.mp4';
 import tresleches1 from './assets/tresleches1.jpg';
 import tresleches2 from './assets/tresleches2.jpg';
 import { motion } from 'framer-motion';
@@ -46,7 +46,7 @@ function App() {
       {/* Hero Section */}
       <section className="hero-video-section">
         <video className="background-video" autoPlay muted loop playsInline>
-          <source src={cakeVideo} type="video/mp4" />
+          <source src={cakeBackgroundVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero-overlay">
