@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import cakeBackgroundVideo from './assets/cakeBackgroundVideo.mp4';
 import tresleches1 from './assets/tresleches1.jpg';
+import galaLogo from './assets/gala_sweets_logo.png';
 import tresleches2 from './assets/tresleches2.jpg';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
@@ -50,6 +51,8 @@ function App() {
           Your browser does not support the video tag.
         </video>
         <div className="hero-overlay">
+          <img src={galaLogo} alt="Gala Sweets Logo" className="hero-logo" />
+
           <motion.h1 className="hero-title" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeOut' }}>
             We're here to bake you happy!
           </motion.h1>

@@ -55,7 +55,21 @@ html, body {
   z-index: 1;
   padding: 0 20px;
   max-width: 960px;
+  margin-top: -140px;
 }
+
+.hero-logo {
+  margin-bottom: -40px; /* pull it closer to the text */
+  width: 200px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 .hero-title {
   font-size: 3.5rem;
