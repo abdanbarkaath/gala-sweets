@@ -4,12 +4,12 @@
   "description": "Order Classic & Mango Tres Leches cakes fresh from Gala Sweets in Chicago. Homemade, moist, and made with love.",
   "icons": [
     {
-      "src": "gala_sweets_logo.png",
+      "src": "logo192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "gala_sweets_logo.png",
+      "src": "logo512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
